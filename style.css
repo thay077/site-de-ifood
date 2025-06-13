@@ -20,7 +20,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
@@ -54,7 +53,6 @@ header nav ul li a:hover {
     text-align: center;
     padding: 60px 30px;
     background-color: #ffeb3b;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .intro h2 {
@@ -82,7 +80,7 @@ header nav ul li a:hover {
     background-color: #d84315;
 }
 
-/* Seção de restaurantes */
+/* Seção de Restaurantes */
 .restaurantes {
     text-align: center;
     padding: 40px;
@@ -95,11 +93,15 @@ header nav ul li a:hover {
 }
 
 .restaurantes .restaurante {
+    display: inline-block;
+    width: 30%;
     margin: 20px;
+    text-align: center;
     padding: 15px;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .restaurantes .restaurante:hover {
@@ -113,7 +115,28 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-.restaurantes .restaurante button {
+.restaurantes .restaurante h3 {
+    font-size: 1.5em;
+}
+
+/* Cardápio */
+.cardapio {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.cardapio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cardapio ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.cardapio button {
     background-color: #ff5722;
     color: white;
     padding: 10px 20px;
@@ -123,11 +146,11 @@ header nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.restaurantes .restaurante button:hover {
+.cardapio button:hover {
     background-color: #d84315;
 }
 
-/* Seção do Carrinho */
+/* Carrinho */
 .carrinho {
     padding: 40px;
     background-color: #fff;
@@ -165,13 +188,18 @@ header nav ul li a:hover {
     background-color: #388E3C;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Notificação */
+.notificacao {
     position: fixed;
-    width: 100%;
-    bottom: 0;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }

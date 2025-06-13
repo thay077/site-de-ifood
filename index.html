@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <!-- Cabeçalho -->
     <header>
@@ -30,68 +28,46 @@
     <!-- Seção de Boas-vindas -->
     <section class="intro">
         <h2>Encontre seu prato favorito!</h2>
-        <p>Descubra os melhores restaurantes e faça seu pedido rapidamente.</p>
-        <button class="btn-explore" onclick="mostrarRestaurantes()">Explore Restaurantes</button>
+        <p>Explore os melhores restaurantes e faça seu pedido.</p>
+        <button class="btn-explore" onclick="mostrarRestaurantes()">Explorar Restaurantes</button>
     </section>
 
     <!-- Seção de Restaurantes -->
-    <section id="restaurantes" class="restaurantes">
+    <section id="restaurantes" class="restaurantes" style="display: none;">
         <h2>Restaurantes Populares</h2>
         <div class="restaurantes-list">
-            <div class="restaurante" data-id="pizzaria">
+            <!-- Restaurante 1 -->
+            <div class="restaurante" onclick="mostrarCardapio('pizzaria')">
                 <img src="https://images.unsplash.com/photo-1603052872631-1c423ce2da16" alt="Pizza">
                 <h3>Pizzaria Bella</h3>
-                <p>Sabores italianos autênticos com ingredientes frescos.</p>
-                <button class="btn-cardapio" onclick="verCardapio('pizzaria')">Ver Cardápio</button>
-                <div id="cardapio-pizzaria" class="cardapio" style="display:none;">
-                    <h3>Cardápio</h3>
-                    <ul>
-                        <li>Pizza Margherita</li>
-                        <li>Pizza Calabresa</li>
-                        <li>Pizza Portuguesa</li>
-                    </ul>
-                    <button onclick="adicionarAoCarrinho('Pizza Margherita')">Adicionar ao Carrinho</button>
-                </div>
+                <p>Sabores italianos autênticos.</p>
             </div>
-            <div class="restaurante" data-id="sushi">
+            <!-- Restaurante 2 -->
+            <div class="restaurante" onclick="mostrarCardapio('sushi')">
                 <img src="https://images.unsplash.com/photo-1549366022-03c6ba8da05d" alt="Sushi">
                 <h3>Sushi & Sashimi</h3>
-                <p>A melhor seleção de sushi e pratos japoneses.</p>
-                <button class="btn-cardapio" onclick="verCardapio('sushi')">Ver Cardápio</button>
-                <div id="cardapio-sushi" class="cardapio" style="display:none;">
-                    <h3>Cardápio</h3>
-                    <ul>
-                        <li>Sushi Roll</li>
-                        <li>Sashimi de Salmão</li>
-                        <li>Temaki</li>
-                    </ul>
-                    <button onclick="adicionarAoCarrinho('Sushi Roll')">Adicionar ao Carrinho</button>
-                </div>
+                <p>Sushi fresco e sashimi delicioso.</p>
             </div>
-            <div class="restaurante" data-id="hamburgueria">
+            <!-- Restaurante 3 -->
+            <div class="restaurante" onclick="mostrarCardapio('hamburgueria')">
                 <img src="https://images.unsplash.com/photo-1574158622681-9937a1912f44" alt="Hamburguer">
                 <h3>Hamburgueria Gourmet</h3>
-                <p>Hambúrgueres artesanais com ingredientes de qualidade.</p>
-                <button class="btn-cardapio" onclick="verCardapio('hamburgueria')">Ver Cardápio</button>
-                <div id="cardapio-hamburgueria" class="cardapio" style="display:none;">
-                    <h3>Cardápio</h3>
-                    <ul>
-                        <li>Cheese Burger</li>
-                        <li>Bacon Burger</li>
-                        <li>Veggie Burger</li>
-                    </ul>
-                    <button onclick="adicionarAoCarrinho('Cheese Burger')">Adicionar ao Carrinho</button>
-                </div>
+                <p>Hambúrgueres artesanais e saborosos.</p>
             </div>
         </div>
     </section>
 
-    <!-- Carrinho de Compras -->
+    <!-- Seção do Cardápio -->
+    <section id="cardapio" class="cardapio" style="display: none;">
+        <h2>Cardápio</h2>
+        <ul id="itens-cardapio"></ul>
+        <button class="btn-voltar" onclick="voltarRestaurantes()">Voltar aos Restaurantes</button>
+    </section>
+
+    <!-- Carrinho -->
     <section id="carrinho" class="carrinho">
         <h2>Carrinho</h2>
-        <ul id="lista-carrinho">
-            <!-- Itens do carrinho aparecerão aqui -->
-        </ul>
+        <ul id="lista-carrinho"></ul>
         <button class="btn-pedido" onclick="finalizarPedido()">Finalizar Pedido</button>
     </section>
 
@@ -99,6 +75,10 @@
     <footer>
         <p>© 2025 Meu iFood | Todos os direitos reservados.</p>
     </footer>
-</body>
 
+    <!-- Notificação -->
+    <div id="notificacao" class="notificacao" style="display: none;">
+        <p>Item adicionado ao carrinho!</p>
+    </div>
+</body>
 </html>
