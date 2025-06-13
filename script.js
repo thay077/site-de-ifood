@@ -1,52 +1,36 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializa o cardápio com opções padrão
-    let pratos = {
-        pizzaria: ['Pizza Margherita', 'Pizza Calabresa', 'Pizza Portuguesa'],
-        sushi: ['Sushi Roll', 'Sashimi de Salmão', 'Temaki'],
-        hamburgueria: ['Cheese Burger', 'Bacon Burger', 'Veggie Burger']
-    };
+let carrinho = [];
 
-    let selectPrato = document.getElementById('prato');
-    let selectRestaurante = document.getElementById('restaurante');
-    
-    // Função para atualizar as opções do prato
-    function atualizarCardapio() {
-        let restauranteEscolhido = selectRestaurante.value;
-        let pratosDisponiveis = pratos[restauranteEscolhido];
+function mostrarRestaurantes() {
+    const sectionRestaurantes = document.getElementById("restaurantes");
+    sectionRestaurantes.style.display = 'block';
+}
 
-        // Limpa o select de pratos
-        selectPrato.innerHTML = '';
+function verCardapio(restauranteId) {
+    const cardapioDiv = document.getElementById(`cardapio-${restauranteId}`);
+    cardapioDiv.style.display = cardapioDiv.style.display === 'none' ? 'block' : 'none';
+}
 
-        // Adiciona as opções de pratos
-        pratosDisponiveis.forEach(function(prato) {
-            let option = document.createElement('option');
-            option.value = prato.toLowerCase().replace(' ', '-');
-            option.textContent = prato;
-            selectPrato.appendChild(option);
-        });
+function adicionarAoCarrinho(item) {
+    carrinho.push(item);
+    atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+    const carrinhoLista = document.getElementById("lista-carrinho");
+    carrinhoLista.innerHTML = '';
+    carrinho.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        carrinhoLista.appendChild(li);
+    });
+}
+
+function finalizarPedido() {
+    if (carrinho.length === 0) {
+        alert("O carrinho está vazio!");
+    } else {
+        alert("Pedido finalizado com sucesso!");
+        carrinho = [];
+        atualizarCarrinho();
     }
-
-    // Atualiza o cardápio inicial
-    atualizarCardapio();
-
-    // Adiciona evento de mudança no restaurante
-    selectRestaurante.addEventListener('change', function() {
-        atualizarCardapio();
-    });
-
-    // Validação do formulário antes de enviar
-    document.getElementById('form-pedido').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        let restaurante = selectRestaurante.value;
-        let prato = selectPrato.value;
-        let quantidade = document.getElementById('quantidade').value;
-
-        if (quantidade < 1) {
-            alert('Por favor, insira uma quantidade válida!');
-            return;
-        }
-
-        alert(`Pedido confirmado! ${quantidade}x de ${prato} do restaurante ${restaurante}.`);
-    });
-});
+}
