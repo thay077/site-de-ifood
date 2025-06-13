@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu iFood</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -35,19 +36,19 @@
     <section class="restaurantes">
         <h2>Restaurantes Populares</h2>
         <div class="restaurantes-list">
-            <div class="restaurante">
+            <div class="restaurante" data-id="pizzaria">
                 <img src="https://images.unsplash.com/photo-1603052872631-1c423ce2da16" alt="Pizza">
                 <h3>Pizzaria Bella</h3>
                 <p>Sabores italianos autênticos com ingredientes frescos.</p>
                 <button class="btn-cardapio">Ver Cardápio</button>
             </div>
-            <div class="restaurante">
+            <div class="restaurante" data-id="sushi">
                 <img src="https://images.unsplash.com/photo-1549366022-03c6ba8da05d" alt="Sushi">
                 <h3>Sushi & Sashimi</h3>
                 <p>A melhor seleção de sushi e pratos japoneses.</p>
                 <button class="btn-cardapio">Ver Cardápio</button>
             </div>
-            <div class="restaurante">
+            <div class="restaurante" data-id="hamburgueria">
                 <img src="https://images.unsplash.com/photo-1574158622681-9937a1912f44" alt="Hamburguer">
                 <h3>Hamburgueria Gourmet</h3>
                 <p>Hambúrgueres artesanais com ingredientes de qualidade.</p>
@@ -59,7 +60,7 @@
     <!-- Seção de Pedidos -->
     <section class="pedidos">
         <h2>Faça Seu Pedido</h2>
-        <form>
+        <form id="form-pedido">
             <label for="restaurante">Escolha o Restaurante:</label>
             <select id="restaurante" name="restaurante">
                 <option value="pizzaria">Pizzaria Bella</option>
@@ -69,9 +70,7 @@
 
             <label for="prato">Escolha o Prato:</label>
             <select id="prato" name="prato">
-                <option value="pizza">Pizza Margherita</option>
-                <option value="sushi">Sushi Roll</option>
-                <option value="hamburguer">Cheese Burger</option>
+                <!-- Opções serão preenchidas dinamicamente com JavaScript -->
             </select>
 
             <label for="quantidade">Quantidade:</label>
@@ -85,9 +84,5 @@
     <footer>
         <p>© 2025 Meu iFood | Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        // Aqui você pode adicionar interações com JavaScript
-    </script>
 </body>
 </html>
