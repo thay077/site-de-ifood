@@ -1,0 +1,174 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #ff5722;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #ffeb3b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn-explore {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: #d84315;
+}
+
+/* Seção de restaurantes */
+.restaurantes {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.restaurantes h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.restaurantes-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.restaurante {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.restaurante:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.restaurante img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.restaurante h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.restaurante p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.btn-cardapio {
+    background-color: #ff7043;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cardapio:hover {
+    background-color: #d32f2f;
+}
+
+/* Seção de pedidos */
+.pedidos {
+    background-color: #eeeeee;
+    padding: 40px;
+    text-align: center;
+}
+
+.pedidos h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.pedidos form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pedidos form label {
