@@ -9,6 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu iFood</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
@@ -16,14 +27,39 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Restaurantes</a></li>
-                <li><a href="#">Pedidos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#restaurantes">Restaurantes</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <!-- Menu suspenso -->
+                <li class="dropdown">
+                    <a href="#">Mais</a>
+                    <div class="dropdown-content">
+                        <a href="#">Opção 1</a>
+                        <a href="#">Opção 2</a>
+                        <a href="#">Opção 3</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <!-- Conteúdo -->
+    <section class="intro" id="inicio">
+        <h2>Encontre seu prato favorito!</h2>
+        <p>Explore os melhores restaurantes e faça seu pedido.</p>
+        <button class="btn-explore" onclick="mostrarRestaurantes()">Explorar Restaurantes</button>
+    </section>
+
+    <!-- Outras seções... -->
+
+    <footer>
+        <p>© 2025 Meu iFood | Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
 
     <!-- Seção de Boas-vindas -->
     <section class="intro">
