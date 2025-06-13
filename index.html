@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu iFood</title>
+    <title>Nosso iFood</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <h1>Meu iFood</h1>
+            <h1>Nosso iFood</h1>
         </div>
         <nav>
             <ul>
@@ -20,6 +22,11 @@
                 <li><a href="#restaurantes">Restaurantes</a></li>
                 <li><a href="#pedidos">Pedidos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
+                <section id="sobre" class="sobre">
+    <h2>Sobre</h2>
+    <p>Nosso compromisso é oferecer a você uma experiência única, com os melhores restaurantes e produtos ao seu alcance, a qualquer momento e em qualquer lugar.</p>
+</section>
+
                 <li><a href="#contato">Contato</a></li>
                 <!-- Menu suspenso -->
                 <li class="dropdown">
@@ -37,7 +44,7 @@
     <!-- Seção de introdução -->
     <section class="intro" id="inicio">
         <h2>Encontre seu prato favorito!</h2>
-        <p>Explore os melhores restaurantes e faça seu pedido.</p>
+        <p>Explore os melhores lugares e faça seu pedido.</p>
         <button class="btn-explore" onclick="mostrarRestaurantes()">Explorar Restaurantes</button>
     </section>
 
@@ -45,8 +52,8 @@
     <section id="restaurantes" class="restaurantes" style="display: none;">
         <h2>Restaurantes</h2>
         <div class="restaurante" onclick="mostrarCardapio('pizzaria')">
-            <img src="https://via.placeholder.com/300x200" alt="Pizzaria">
-            <h3>Pizzaria</h3>
+            <img src="https://via.placeholder.com/300x200" alt="Pizzaria BellaPizza">
+            <h3>BellaPizza</h3>
         </div>
         <div class="restaurante" onclick="mostrarCardapio('sushi')">
             <img src="https://via.placeholder.com/300x200" alt="Sushi">
@@ -55,6 +62,22 @@
         <div class="restaurante" onclick="mostrarCardapio('hamburgueria')">
             <img src="https://via.placeholder.com/300x200" alt="Hamburgueria">
             <h3>Hamburgueria</h3>
+        </div>
+        <div class="restaurante" onclick="mostrarCardapio('sorveteria')">
+            <img src="https://via.placeholder.com/300x200" alt="Sorveteria ICEFROZEN">
+            <h3>ICEFROZEN</h3>
+        </div>
+        <div class="restaurante" onclick="mostrarCardapio('supermercado')">
+            <img src="https://via.placeholder.com/300x200" alt="Supermercado">
+            <h3>Supermercado</h3>
+        </div>
+        <div class="restaurante" onclick="mostrarCardapio('petshop')">
+            <img src="https://via.placeholder.com/300x200" alt="Pet Shop">
+            <h3>Pet Shop</h3>
+        </div>
+        <div class="restaurante" onclick="mostrarCardapio('roupas')">
+            <img src="https://via.placeholder.com/300x200" alt="Loja de Roupas">
+            <h3>Loja de Roupas</h3>
         </div>
     </section>
 
@@ -74,7 +97,8 @@
     </div>
 
     <footer>
-        <p>© 2025 Meu iFood | Todos os direitos reservados.</p>
+        <p>© 2025 Meu iFood | Contem direitos autorais.</p>
     </footer>
 </body>
+
 </html>
