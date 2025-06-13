@@ -20,212 +20,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-}
-
-header .logo h1 {
-    font-size: 2.5em;
-    font-weight: 600;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
-    margin-left: 25px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #ffeb3b;
-}
-
-/* Seção de introdução */
-.intro {
-    text-align: center;
-    padding: 60px 30px;
-    background-color: #ffeb3b;
-}
-
-.intro h2 {
-    font-size: 3em;
-    margin-bottom: 15px;
-}
-
-.intro p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.btn-explore {
-    background-color: #ff5722;
-    color: white;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-explore:hover {
-    background-color: #d84315;
-}
-
-/* Seção de Restaurantes */
-.restaurantes {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-}
-
-.restaurantes h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.restaurantes .restaurante {
-    display: inline-block;
-    width: 30%;
-    margin: 20px;
-    text-align: center;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.restaurantes .restaurante:hover {
-    transform: scale(1.05);
-}
-
-.restaurantes .restaurante img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.restaurantes .restaurante h3 {
-    font-size: 1.5em;
-}
-
-/* Cardápio */
-.cardapio {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-}
-
-.cardapio ul {
-    list-style: none;
-    padding: 0;
-}
-
-.cardapio ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.cardapio button {
-    background-color: #ff5722;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cardapio button:hover {
-    background-color: #d84315;
-}
-
-/* Carrinho */
-.carrinho {
-    padding: 40px;
-    background-color: #fff;
-    margin-top: 50px;
-    text-align: center;
-}
-
-.carrinho h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.carrinho ul {
-    list-style: none;
-    padding: 0;
-}
-
-.carrinho ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.carrinho .btn-pedido {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.carrinho .btn-pedido:hover {
-    background-color: #388E3C;
-}
-
-/* Notificação */
-.notificacao {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1.2em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Resetando margens e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Cabeçalho */
-header {
-    background-color: #ff5722;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -293,8 +87,7 @@ header nav ul li:hover .dropdown-content {
 
 /* Efeito de fundo do cabeçalho */
 header.scrolled {
-    background-color: #d84315;
-    /* Cor mais escura quando rolar */
+    background-color: #d84315;  /* Cor mais escura quando rolar */
 }
 
 /* Seção de introdução */
@@ -330,21 +123,105 @@ header.scrolled {
     background-color: #d84315;
 }
 
-/* Outras seções e estilos... */
-// Adiciona o efeito de scroll no cabeçalho
-window.addEventListener('scroll', ()=> {
-        const header=document.querySelector('header');
+/* Seção de Restaurantes */
+.restaurantes {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
 
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        }
+.restaurante {
+    text-align: center;
+    cursor: pointer;
+}
 
-        else {
-            header.classList.remove('scrolled');
-        }
-    });
+.restaurante img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
 
-// Função de mostrar restaurantes (exemplo de interatividade)
-function mostrarRestaurantes() {
-    alert('Explorando Restaurantes!');
+.restaurante:hover img {
+    transform: scale(1.1);
+}
+
+.restaurante h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+/* Seção do Cardápio */
+.cardapio {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.cardapio h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#itens-cardapio {
+    list-style: none;
+    padding: 0;
+}
+
+#itens-cardapio li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+#itens-cardapio button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#itens-cardapio button:hover {
+    background-color: #45a049;
+}
+
+/* Carrinho */
+#carrinho {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#carrinho h3 {
+    margin-bottom: 15px;
+}
+
+#carrinho ul {
+    list-style: none;
+    padding: 0;
+}
+
+#carrinho ul li {
+    margin: 5px 0;
+}
+
+/* Notificação */
+.notificacao {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

@@ -9,17 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu iFood</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
@@ -45,76 +34,47 @@
         </nav>
     </header>
 
-    <!-- Conteúdo -->
+    <!-- Seção de introdução -->
     <section class="intro" id="inicio">
         <h2>Encontre seu prato favorito!</h2>
         <p>Explore os melhores restaurantes e faça seu pedido.</p>
         <button class="btn-explore" onclick="mostrarRestaurantes()">Explorar Restaurantes</button>
     </section>
 
-    <!-- Outras seções... -->
-
-    <footer>
-        <p>© 2025 Meu iFood | Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
-
-
-    <!-- Seção de Boas-vindas -->
-    <section class="intro">
-        <h2>Encontre seu prato favorito!</h2>
-        <p>Explore os melhores restaurantes e faça seu pedido.</p>
-        <button class="btn-explore" onclick="mostrarRestaurantes()">Explorar Restaurantes</button>
-    </section>
-
-    <!-- Seção de Restaurantes -->
+    <!-- Seção de restaurantes -->
     <section id="restaurantes" class="restaurantes" style="display: none;">
-        <h2>Restaurantes Populares</h2>
-        <div class="restaurantes-list">
-            <!-- Restaurante 1 -->
-            <div class="restaurante" onclick="mostrarCardapio('pizzaria')">
-                <img src="https://images.unsplash.com/photo-1603052872631-1c423ce2da16" alt="Pizza">
-                <h3>Pizzaria Bella</h3>
-                <p>Sabores italianos autênticos.</p>
-            </div>
-            <!-- Restaurante 2 -->
-            <div class="restaurante" onclick="mostrarCardapio('sushi')">
-                <img src="https://images.unsplash.com/photo-1549366022-03c6ba8da05d" alt="Sushi">
-                <h3>Sushi & Sashimi</h3>
-                <p>Sushi fresco e sashimi delicioso.</p>
-            </div>
-            <!-- Restaurante 3 -->
-            <div class="restaurante" onclick="mostrarCardapio('hamburgueria')">
-                <img src="https://images.unsplash.com/photo-1574158622681-9937a1912f44" alt="Hamburguer">
-                <h3>Hamburgueria Gourmet</h3>
-                <p>Hambúrgueres artesanais e saborosos.</p>
-            </div>
+        <h2>Restaurantes</h2>
+        <div class="restaurante" onclick="mostrarCardapio('pizzaria')">
+            <img src="https://via.placeholder.com/300x200" alt="Pizzaria">
+            <h3>Pizzaria</h3>
+        </div>
+        <div class="restaurante" onclick="mostrarCardapio('sushi')">
+            <img src="https://via.placeholder.com/300x200" alt="Sushi">
+            <h3>Sushi</h3>
+        </div>
+        <div class="restaurante" onclick="mostrarCardapio('hamburgueria')">
+            <img src="https://via.placeholder.com/300x200" alt="Hamburgueria">
+            <h3>Hamburgueria</h3>
         </div>
     </section>
 
-    <!-- Seção do Cardápio -->
+    <!-- Seção do cardápio -->
     <section id="cardapio" class="cardapio" style="display: none;">
+        <button class="btn-voltar" onclick="voltarRestaurantes()">Voltar</button>
         <h2>Cardápio</h2>
         <ul id="itens-cardapio"></ul>
-        <button class="btn-voltar" onclick="voltarRestaurantes()">Voltar aos Restaurantes</button>
-    </section>
-
-    <!-- Carrinho -->
-    <section id="carrinho" class="carrinho">
-        <h2>Carrinho</h2>
-        <ul id="lista-carrinho"></ul>
         <button class="btn-pedido" onclick="finalizarPedido()">Finalizar Pedido</button>
     </section>
 
-    <!-- Rodapé -->
+    <!-- Carrinho e Notificação -->
+    <div id="notificacao" class="notificacao">Item adicionado ao carrinho!</div>
+    <div id="carrinho">
+        <h3>Carrinho</h3>
+        <ul id="lista-carrinho"></ul>
+    </div>
+
     <footer>
         <p>© 2025 Meu iFood | Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Notificação -->
-    <div id="notificacao" class="notificacao" style="display: none;">
-        <p>Item adicionado ao carrinho!</p>
-    </div>
 </body>
 </html>
