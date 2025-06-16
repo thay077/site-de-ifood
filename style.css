@@ -1,34 +1,28 @@
-/* Resetando margens e padding */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     color: #333;
-    line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #ff5722;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+    background-color: #f44336;
+    padding: 10px 20px;
 }
 
-header .logo h1 {
-    font-size: 2.5em;
-    font-weight: 600;
+header .logo img {
+    height: 40px;
 }
 
 header nav ul {
@@ -37,129 +31,99 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 25px;
-    position: relative;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-size: 16px;
 }
 
-/* Efeito de hover nos links do cabeçalho */
 header nav ul li a:hover {
-    color: #ffeb3b;
     text-decoration: underline;
 }
 
-/* Menu suspenso */
-header nav ul li.dropdown {
-    cursor: pointer;
+/* Seção Hero */
+.hero {
+    background-color: #ffebee;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-header nav ul li .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ff5722;
-    min-width: 160px;
-    z-index: 1;
+.hero h1 {
+    font-size: 36px;
+    color: #d32f2f;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+.hero button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
     border-radius: 5px;
 }
 
-header nav ul li .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 1em;
+.hero button:hover {
+    background-color: #b71c1c;
 }
 
-header nav ul li .dropdown-content a:hover {
-    background-color: #ffeb3b;
-}
-
-header nav ul li:hover .dropdown-content {
-    display: block;
-}
-
-/* Efeito de fundo do cabeçalho */
-header.scrolled {
-    background-color: #3c10a9b7;  /* Cor mais escura quando rolar */
-}
-
-/* Seção de introdução */
-.intro {
+/* Restaurantes */
+.restaurantes {
     text-align: center;
-    padding: 60px 30px;
-    background-color: #e7d320;
-    box-shadow: 0 4px 10px rgba(8, 8, 8, 0.1);
+    padding: 50px 20px;
 }
 
-.intro h2 {
-    font-size: 3em;
-    margin-bottom: 15px;
-}
-
-.intro p {
-    font-size: 1.5em;
+.restaurantes h2 {
+    font-size: 28px;
+    color: #d32f2f;
     margin-bottom: 30px;
 }
 
-.btn-explore {
-    background-color: #ff5722;
-    color: white;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-explore:hover {
-    background-color: #d84315;
-}
-
-/* Seção de Restaurantes */
-.restaurantes {
+.cards {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px 20px;
+    gap: 20px;
 }
 
-.restaurante {
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
     text-align: center;
-    cursor: pointer;
-    margin-bottom: 20px;
+    padding: 15px;
 }
 
-.restaurante img {
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.restaurante:hover img {
-    transform: scale(1.1);
+.card h3 {
+    font-size: 20px;
+    color: #d32f2f;
+    margin: 15px 0;
 }
 
-.restaurante h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
+.card p {
+    font-size: 16px;
+    color: #777;
 }
 
-/* Seção do Cardápio */
-.cardapio {
+/* Rodapé */
+footer {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
 }
-
-.cardapio h2 {
-    font-size: 2.5em;
-    margin

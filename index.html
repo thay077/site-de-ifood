@@ -1,100 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso iFood</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Clone iFood</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <h1>Nosso iFood</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/IFood_logo.svg" alt="iFood">
         </div>
         <nav>
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#restaurantes">Restaurantes</a></li>
-                <li><a href="#pedidos">Pedidos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                
-                <li><a href="#contato">Contato</a></li>
-                <!-- Menu suspenso -->
-                <li class="dropdown">
-                    <a href="#">Mais</a>
-                    <div class="dropdown-content">
-                        <a href="#">Opção 1</a>
-                        <a href="#">Opção 2</a>
-                        <a href="#">Opção 3</a>
-                    </div>
-                </li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Meu Pedido</a></li>
+                <li><a href="#">Perfil</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seção de introdução -->
-    <section class="intro" id="inicio">
-        <h2>Encontre seu prato favorito!</h2>
-        <p>Explore os melhores lugares e faça seu pedido.</p>
-        <button class="btn-explore" onclick="mostrarRestaurantes()">Explorar Restaurantes</button>
+    <!-- Seção principal -->
+    <section class="hero">
+        <h1>O melhor delivery na sua casa</h1>
+        <p>Encontre os melhores restaurantes e peça agora!</p>
+        <button>Veja os Restaurantes</button>
     </section>
 
-    <!-- Seção de restaurantes -->
-    <section id="restaurantes" class="restaurantes" style="display: none;">
-        <h2>Restaurantes</h2>
-        <div class="restaurante" onclick="mostrarCardapio('pizzaria')">
-            <img src="https://via.placeholder.com/300x200" alt="Pizzaria BellaPizza">
-            <h3>BellaPizza</h3>
-        </div>
-        <div class="restaurante" onclick="mostrarCardapio('sushi')">
-            <img src="https://via.placeholder.com/300x200" alt="Sushi">
-            <h3>Sushi</h3>
-        </div>
-        <div class="restaurante" onclick="mostrarCardapio('hamburgueria')">
-            <img src="https://via.placeholder.com/300x200" alt="Hamburgueria">
-            <h3>Hamburgueria</h3>
-        </div>
-        <div class="restaurante" onclick="mostrarCardapio('sorveteria')">
-            <img src="https://via.placeholder.com/300x200" alt="Sorveteria ICEFROZEN">
-            <h3>ICEFROZEN</h3>
-        </div>
-        <div class="restaurante" onclick="mostrarCardapio('supermercado')">
-            <img src="https://via.placeholder.com/300x200" alt="Supermercado">
-            <h3>Supermercado</h3>
-        </div>
-        <div class="restaurante" onclick="mostrarCardapio('petshop')">
-            <img src="https://via.placeholder.com/300x200" alt="Pet Shop">
-            <h3>Pet Shop</h3>
-        </div>
-        <div class="restaurante" onclick="mostrarCardapio('roupas')">
-            <img src="https://via.placeholder.com/300x200" alt="Loja de Roupas">
-            <h3>Loja de Roupas</h3>
+    <!-- Restaurantes destacados -->
+    <section class="restaurantes">
+        <h2>Restaurantes perto de você</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://www.example.com/restaurante1.jpg" alt="Restaurante 1">
+                <h3>Restaurante A</h3>
+                <p>Comida deliciosa a um preço ótimo.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.example.com/restaurante2.jpg" alt="Restaurante 2">
+                <h3>Restaurante B</h3>
+                <p>Comida rápida e saborosa.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.example.com/restaurante3.jpg" alt="Restaurante 3">
+                <h3>Restaurante C</h3>
+                <p>Pratos inovadores e exclusivos.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Seção do cardápio -->
-    <section id="cardapio" class="cardapio" style="display: none;">
-        <button class="btn-voltar" onclick="voltarRestaurantes()">Voltar</button>
-        <h2>Cardápio</h2>
-        <ul id="itens-cardapio"></ul>
-        <button class="btn-pedido" onclick="finalizarPedido()">Finalizar Pedido</button>
-    </section>
-
-    <!-- Carrinho e Notificação -->
-    <div id="notificacao" class="notificacao">Item adicionado ao carrinho!</div>
-    <div id="carrinho">
-        <h3>Carrinho</h3>
-        <ul id="lista-carrinho"></ul>
-    </div>
-
+    <!-- Rodapé -->
     <footer>
-        <p>© 2025 Meu iFood | Contem direitos autorais.</p>
+        <p>&copy; 2025 iFood Clone - Todos os direitos reservados</p>
     </footer>
 </body>
-
 </html>
