@@ -8,7 +8,7 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f44336;
+    background-color: #4caf50; /* Verde */
     padding: 10px 20px;
 }
 
@@ -46,14 +46,14 @@ header nav ul li a:hover {
 
 /* Seção Hero */
 .hero {
-    background-color: #ffebee;
+    background-color: #ff9800; /* Laranja */
     text-align: center;
     padding: 50px 20px;
 }
 
 .hero h1 {
     font-size: 36px;
-    color: #d32f2f;
+    color: #fff;
 }
 
 .hero form {
@@ -71,7 +71,7 @@ header nav ul li a:hover {
 
 .hero button {
     padding: 10px 20px;
-    background-color: #d32f2f;
+    background-color: #4caf50; /* Verde */
     color: white;
     border: none;
     border-radius: 5px;
@@ -81,7 +81,7 @@ header nav ul li a:hover {
 }
 
 .hero button:hover {
-    background-color: #b71c1c;
+    background-color: #388e3c; /* Verde mais escuro */
 }
 
 /* Restaurantes */
@@ -92,7 +92,7 @@ header nav ul li a:hover {
 
 .restaurantes h2 {
     font-size: 28px;
-    color: #d32f2f;
+    color: #4caf50; /* Verde */
     margin-bottom: 30px;
 }
 
@@ -121,7 +121,7 @@ header nav ul li a:hover {
 
 .card h3 {
     font-size: 20px;
-    color: #d32f2f;
+    color: #4caf50; /* Verde */
     margin: 15px 0;
 }
 
@@ -134,6 +134,6 @@ header nav ul li a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f44336;
+    background-color: #4caf50; /* Verde */
     color: white;
 }
