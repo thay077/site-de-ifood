@@ -22,32 +22,20 @@
         </nav>
     </header>
 
-    <!-- Seção principal -->
+    <!-- Seção Hero (Buscador) -->
     <section class="hero">
-        <h1>O melhor delivery na sua casa</h1>
-        <p>Encontre os melhores restaurantes e peça agora!</p>
-        <button>Veja os Restaurantes</button>
+        <h1>Encontre o melhor delivery na sua região</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Pesquise por restaurante ou prato...">
+            <button type="submit">Pesquisar</button>
+        </form>
     </section>
 
-    <!-- Restaurantes destacados -->
+    <!-- Seção de Restaurantes -->
     <section class="restaurantes">
-        <h2>Restaurantes perto de você</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://www.example.com/restaurante1.jpg" alt="Restaurante 1">
-                <h3>Restaurante A</h3>
-                <p>Comida deliciosa a um preço ótimo.</p>
-            </div>
-            <div class="card">
-                <img src="https://www.example.com/restaurante2.jpg" alt="Restaurante 2">
-                <h3>Restaurante B</h3>
-                <p>Comida rápida e saborosa.</p>
-            </div>
-            <div class="card">
-                <img src="https://www.example.com/restaurante3.jpg" alt="Restaurante 3">
-                <h3>Restaurante C</h3>
-                <p>Pratos inovadores e exclusivos.</p>
-            </div>
+        <h2>Restaurantes próximos</h2>
+        <div id="restaurantList" class="cards">
+            <!-- Os restaurantes serão carregados aqui dinamicamente -->
         </div>
     </section>
 
@@ -55,5 +43,7 @@
     <footer>
         <p>&copy; 2025 iFood Clone - Todos os direitos reservados</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

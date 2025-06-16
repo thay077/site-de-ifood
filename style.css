@@ -56,19 +56,28 @@ header nav ul li a:hover {
     color: #d32f2f;
 }
 
-.hero p {
-    font-size: 18px;
-    color: #555;
+.hero form {
+    margin-top: 20px;
+}
+
+.hero input {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .hero button {
+    padding: 10px 20px;
     background-color: #d32f2f;
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    margin-left: 10px;
 }
 
 .hero button:hover {
@@ -91,6 +100,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
